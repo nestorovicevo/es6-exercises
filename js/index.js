@@ -1,3 +1,3 @@
-import { add } from './utils'
+import { add } from './test-exercise/utils'
 
-console.log(add(4, 5))
+console.log(add(3, 4))

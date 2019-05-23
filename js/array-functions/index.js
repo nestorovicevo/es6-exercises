@@ -1,3 +1,9 @@
+// links:
+// https://www.geeksforgeeks.org/check-whether-an-array-is-subarray-of-another-array/
+// https://medium.com/@alvaro.saburido/set-theory-for-arrays-in-es6-eb2f20a61848
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// https://gomakethings.com/checking-if-two-arrays-are-equal/
+
 import { find, keys } from 'lodash-es'
 
 export function testArrayFunctions () {
@@ -28,14 +34,16 @@ export function testArrayFunctions () {
   const initPath = [1, 2, 3, 4]
   const path = [1, 2, 3, 45, 5]
 
-  // console.log(initPath.length)
-  // console.log(path.length)
-  // console.log(initPath.filter((item, index) => item === path[index]).length)
-  // console.log(path.length)
   // console.log(initPath.length === path.length && initPath.filter((item, index) => item === path[index]).length === path.length)
-
   console.log(path.filter((item, index) => item === initPath[index]).length)
-  console.log(path.length)
-
   // console.log(initPath.filter((item, index) => item === path[index]).length <= path.length)
+
+  const arr1 = [1, 2, 3]
+  const arr2 = [1, 2, 3]
+
+  console.log('arr2 includes arr1 items')
+  console.log(arr1.every(item => arr2.includes(item)))
+
+  console.log('arr1 equal to arr2 without items permutations')
+  console.log(JSON.stringify(arr1) === JSON.stringify(arr2))
 }
